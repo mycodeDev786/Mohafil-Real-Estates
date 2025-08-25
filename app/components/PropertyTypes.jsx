@@ -44,19 +44,25 @@ const categories = [
 
 export default function PropertyCategories() {
   return (
-    <div className="flex flex-wrap justify-center gap-6 py-8">
-      {categories.map((cat, i) => (
-        <div
-          key={i}
-          className={`${cat.color} w-44 h-40 rounded-xl flex flex-col items-center justify-center shadow-md hover:scale-105 transition`}
-        >
-          <div className="bg-white p-3 rounded-full shadow-sm mb-3 text-gray-700">
-            {cat.icon}
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-10">
+        Explore Property Categories
+      </h2>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+        {categories.map((cat, i) => (
+          <div
+            key={i}
+            className={`${cat.color} h-48 rounded-xl flex flex-col items-center justify-center shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-1`}
+          >
+            <div className="bg-white p-3 rounded-full shadow mb-3 text-gray-700">
+              {cat.icon}
+            </div>
+            <h3 className="font-semibold text-gray-800">{cat.name}</h3>
+            <p className="text-sm text-gray-700">{cat.count}</p>
           </div>
-          <h3 className="font-semibold text-gray-700">{cat.name}</h3>
-          <p className="text-sm text-gray-600">{cat.count}</p>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

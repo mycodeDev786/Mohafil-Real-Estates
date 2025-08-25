@@ -36,7 +36,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white">
+    <header className="sticky top-0 z-50 w-full  bg-white">
       {/* Main Header Bar */}
       <div className="flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo and Site Name */}
@@ -126,7 +126,7 @@ export default function Header() {
       </div>
 
       {/* Categories Bar (desktop only) */}
-      <div className="hidden items-center justify-center gap-8 border-t border-gray-200 px-6 py-2 text-sm md:flex">
+      {/* <div className="hidden items-center justify-center gap-8 border-t border-gray-200 px-6 py-2 text-sm md:flex">
         <Category icon={<FaHome />} label={t.houses} count="2,450" dot="blue" />
         <Category
           icon={<FaBuilding />}
@@ -150,7 +150,7 @@ export default function Header() {
           <span>{t.categories}</span>
           <IoMdArrowDropdown />
         </div>
-      </div>
+      </div> */}
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
@@ -205,7 +205,7 @@ export default function Header() {
               {t.listProperty}
             </button>
           </div>
-          <div className="flex flex-wrap gap-4 pt-3">
+          {/* <div className="flex flex-wrap gap-4 pt-3">
             <Category
               icon={<FaHome />}
               label={t.houses}
@@ -230,7 +230,7 @@ export default function Header() {
               count="650"
               dot="orange"
             />
-          </div>
+          </div> */}
         </div>
       )}
     </header>
